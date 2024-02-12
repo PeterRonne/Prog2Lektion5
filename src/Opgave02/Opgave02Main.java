@@ -9,12 +9,14 @@ private static long[] fibonacciStorage;
         int n = 92;
         fibonacciStorage = new long[n + 1];
 
-        System.out.println(fibonacci(10));
+        System.out.println(fibonacci(n));
         System.out.println(Arrays.toString(fibonacciStorage));
     }
     public static int fibonacci(int n) {
-        if (n <= 1)
+        if (n <= 1) {
+            fibonacciStorage[n] = n;
             return n;
+        }
 
         if (fibonacciStorage[n] != 0) {
             return (int) fibonacciStorage[n];
