@@ -2,14 +2,12 @@ package Opgave05;
 
 public class Opgave05Main {
     public static void main(String[] args) {
-        System.out.println(sfd(2, 10));
+        System.out.println(sfd(28,12));
     }
 
     public static int sfd(int a, int b) {
-        if (b <= a && b % a == 2) {
-            return b;
-        } else if (a < b) {
-            return sfd(b, a);
+        if (b == 0) {
+            return a;
         } else {
             return sfd(b, a % b);
         }
